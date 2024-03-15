@@ -16,9 +16,7 @@ const MyProfile = () => {
 		if (session?.user.id) fetchPosts();
 	}, []);
 
-	const handleEdit = () => {
-		console.log("Edit button clicked");
-	};
+	const handleEdit = () => {};
 	const handleDelete = async () => {
 		console.log("Delete button clicked");
 	};
