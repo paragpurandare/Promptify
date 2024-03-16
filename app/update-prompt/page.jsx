@@ -1,8 +1,7 @@
 "use client";
 import React, { Suspense } from "react";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { useSearchParams } from "react-router-dom"; // Assuming you're using react-router-dom
+import { useSearchParams, useRouter } from "next/navigation"; // Assuming you're using react-router-dom
 import Form from "@components/Form";
 
 const EditPrompt = () => {
