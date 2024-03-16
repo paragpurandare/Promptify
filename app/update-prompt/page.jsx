@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import { useEffect, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
+import { useSearchParams } from "react-router-dom"; // Assuming you're using react-router-dom
 import Form from "@components/Form";
 
 const EditPrompt = () => {
@@ -43,15 +44,18 @@ const EditPrompt = () => {
 			setSubmitting(false);
 		}
 	};
+
 	return (
 		<div>
-			<Form
-				type="Edit"
-				post={post}
-				setPost={setPost}
-				submitting={submitting}
-				handleSubmit={UpdatePrompt}
-			/>
+			<Suspense fallback={<div>Loading...</div>}>
+				<Form
+					type="Edit"
+					post={post}
+					setPost={setPost}
+					submitting={submitting}
+					handleSubmit={UpdatePrompt}
+				/>
+			</Suspense>
 		</div>
 	);
 };
