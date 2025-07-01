@@ -6,6 +6,7 @@ export const metadata = {
 	title: "Promptify",
 	description: "Find your Prompt and Start generating",
 };
+
 const RootLayout = ({ children }) => {
 	return (
 		<html lang="en">
@@ -14,10 +15,12 @@ const RootLayout = ({ children }) => {
 					<div className="main">
 						<div className="gradient" />
 					</div>
-					<main className="app">
-						<Nav />
-						{children}
-					</main>
+					<div className="responsive-container">
+						<main className="app">
+							<Nav />
+							{children}
+						</main>
+					</div>
 				</Provider>
 			</body>
 		</html>

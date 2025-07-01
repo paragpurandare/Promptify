@@ -90,12 +90,152 @@
     padding-left: 0.7rem;
     padding-right: 0.7rem;
   }
+  .app, .main, .feed, .prompt_card, .form_input, .form_textarea {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+  
+  /* Responsive Container Styles */
+  .responsive-container {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding: 0 8px !important;
+  }
+  .responsive-container .app {
+    padding: 0 8px !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  .head_text {
+    font-size: 1.8rem !important;
+    line-height: 2rem !important;
+    margin-top: 1rem !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  .desc {
+    font-size: 0.9rem !important;
+    line-height: 1.4rem !important;
+    margin-top: 0.5rem !important;
+    padding: 0 4px !important;
+    word-wrap: break-word !important;
+  }
+  .feed {
+    margin-top: 1rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .search_input {
+    font-size: 0.85rem !important;
+    padding: 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  /* Nav component styles - FIXED FOR MOBILE */
+  nav, .nav {
+    width: 100% !important;
+    padding: 0.5rem 0 !important;
+    flex-wrap: nowrap !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  .logo_text {
+    font-size: 1rem !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+  }
   .black_btn, .outline_btn {
-    width: 100%;
-    min-width: 0;
-    font-size: 1rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.8rem !important;
+    min-width: auto !important;
+    white-space: nowrap !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+  }
+  /* Profile dropdown and buttons visibility fix */
+  .dropdown {
+    width: auto !important;
+    max-width: 200px !important;
+    right: 0 !important;
+    left: auto !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  .dropdown_link {
+    font-size: 0.9rem !important;
+    padding: 0.5rem !important;
+    display: block !important;
+    visibility: visible !important;
+  }
+  /* Ensure all nav elements are visible */
+  nav > *, .nav > * {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  /* Prompt cards */
+  .prompt_card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0.5rem 0 !important;
+    padding: 1rem !important;
+    box-sizing: border-box !important;
+  }
+  .prompt_layout {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+  /* Form elements */
+  .form_textarea, .form_input {
+    width: 100% !important;
+    font-size: 0.9rem !important;
+    padding: 0.75rem !important;
+    box-sizing: border-box !important;
+  }
+  /* General responsive fixes */
+  * {
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .flex-between, .flex-center, .flex-start, .flex-end {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .head_text {
+    font-size: 1.5rem !important;
+    line-height: 1.8rem !important;
+  }
+  .desc {
+    font-size: 0.8rem !important;
+    line-height: 1.2rem !important;
+  }
+  .black_btn, .outline_btn {
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.6rem !important;
+  }
+  .logo_text {
+    font-size: 0.9rem !important;
+  }
+  .prompt_card {
+    padding: 0.75rem !important;
   }
 }
 
