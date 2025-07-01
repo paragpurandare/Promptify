@@ -13,7 +13,8 @@ const PromptSchema = new Schema({
 		type: String,
 		required: [true, "Tag is required"],
 	},
-});
+},
+{ timestamps: true });
 
 const Prompt = models.Prompt || model("Prompt", PromptSchema);
 export default Prompt;
