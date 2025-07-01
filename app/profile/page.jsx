@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -13,7 +14,7 @@ const MyProfile = () => {
 		const fetchPosts = async () => {
 			try {
 				const response = await fetch(
-					`/api/users/${session?.user.id}/posts`
+					`../api/users/${session?.user.id}/posts`
 				);
 				if (response.ok) {
 					const data = await response.json();
